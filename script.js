@@ -1,70 +1,10 @@
 
-const Icons = [
-    {
-        name: "Monster",
-        img: "img/Monster.png"
-    },
-    {
-        name: "Monster",
-        img: "img/Monster.png"
-    },
-    {
-        name: "Camera",
-        img: "img/Camera.png"
-    },
-    {
-        name: "Camera",
-        img: "img/Camera.png"
-    },
-    {
-        name: "Gamepad",
-        img: "img/Gamepad.png"
-    },
-    {
-        name: "Gamepad",
-        img: "img/Gamepad.png"
-    },
-    {
-        name: "Ipod",
-        img: "img/Ipod.png"
-    },
-    {
-        name: "Ipod",
-        img: "img/Ipod.png"
-    },
-    {
-        name: "Painting",
-        img: "img/Painting.png"
-    },
-    {
-        name: "Painting",
-        img: "img/Painting.png"
-    },
-    {
-        name: "Painting2",
-        img: "img/Painting2.png"
-    },
-    {
-        name: "Painting2",
-        img: "img/Painting2.png"
-    },
-    {
-        name: "SecurityCamera",
-        img: "img/SecurityCamera.png"
-    },
-    {
-        name: "SecurityCamera",
-        img: "img/SecurityCamera.png"
-    },
-    {
-        name: "VideoCamera",
-        img: "img/VideoCamera.png"
-    },
-    {
-        name: "VideoCamera",
-        img: "img/VideoCamera.png"
-    }
-]
+const Icons = [{ name: "Monster", img: "img/Monster.png" }, { name: "Monster", img: "img/Monster.png" }, { name: "Camera", img: "img/Camera.png" }, 
+                { name: "Camera", img: "img/Camera.png" }, { name: "Gamepad", img: "img/Gamepad.png" }, { name: "Gamepad", img: "img/Gamepad.png" }, 
+                { name: "Ipod", img: "img/Ipod.png" }, { name: "Ipod", img: "img/Ipod.png" }, { name: "Painting", img: "img/Painting.png" }, 
+                { name: "Painting", img: "img/Painting.png" }, { name: "Painting2", img: "img/Painting2.png" }, { name: "Painting2", img: "img/Painting2.png" }, 
+                { name: "SecurityCamera", img: "img/SecurityCamera.png" }, { name: "SecurityCamera", img: "img/SecurityCamera.png" }, 
+                { name: "VideoCamera", img: "img/VideoCamera.png" }, { name: "VideoCamera", img: "img/VideoCamera.png" }];
 
 Icons.sort(() => Math.random() - .5);
 
@@ -132,7 +72,5 @@ const checkMatch = () => {
 
 
 reset.addEventListener("click", () => window.location.reload());
-
-
 
 addGrid();
