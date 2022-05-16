@@ -76,6 +76,7 @@ let click = new Audio("sound/click.wav");
 let selectedCards = [];
 let selectedCardsId = [];
 let foundedPairs = [];
+let lock = false;
 let numberOfMoves = 0;
 
 const addGrid = () => {
@@ -90,17 +91,19 @@ const addGrid = () => {
 }
 
 function reverseCard(){
+    if(lock == false){
+        let selectedCard = this.getAttribute("data-id");
+        selectedCards.push(Icons[selectedCard].name);
+        selectedCardsId.push(selectedCard);
 
-    let selectedCard = this.getAttribute("data-id");
-    selectedCards.push(Icons[selectedCard].name);
-    selectedCardsId.push(selectedCard);
+        this.setAttribute("src", Icons[selectedCard].img);
 
-    this.setAttribute("src", Icons[selectedCard].img);
-
-    if(selectedCards.length == 2){
-        setTimeout(checkMatch,500);
+        if(selectedCards.length == 2){
+            setTimeout(checkMatch,500);
+            lock = true;
+        }
+        click.play();
     }
-    click.play();
 }
 
 const checkMatch = () => {
@@ -119,6 +122,7 @@ const checkMatch = () => {
     }
     selectedCards = [];
     selectedCardsId = [];
+    lock = false;
 
     if(foundedPairs.length === Icons.length/2){
         result.textContent = `Congratulations, you found all pairs in ${numberOfMoves} tries!`;
