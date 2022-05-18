@@ -21,7 +21,7 @@ and (min-device-width: 375px)
 and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3) {
     body {
-        width: 950px;
+        width: 1200px;
     }
 
     #score {
