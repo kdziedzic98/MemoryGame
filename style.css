@@ -16,7 +16,10 @@ body{
     font-family: 'Red Hat Display', sans-serif;
 }
 
-@media (max-width: 700px) {
+@media only screen 
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
     body {
         width: 600px;
     }
