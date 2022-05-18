@@ -16,6 +16,17 @@ body{
     font-family: 'Red Hat Display', sans-serif;
 }
 
+@media (max-width: 600px) {
+    body {
+        width: 500px;
+    }
+
+    #score {
+        font-size: 42px;
+    }
+
+}
+
 
 input{
     padding: 10px 20px;
